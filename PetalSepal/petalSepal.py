@@ -32,3 +32,10 @@ lr.score(x_test, y_test) #Check prediction on test data
 
 from sklearn.metrics import mean_squared_error
 mean_squared_error(y_test, pred)
+
+# Now decision tree is used to make classifications and predictions
+from sklearn.tree import DecisionTreeClassifier
+dt = DecisionTreeClassifier()
+dt.fit(x_train, y_train)
+pred_dt = dt.predict(x_test)
+mean_squared_error(y_test, pred_dt)
